@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dimen_row_padding_bottom"
+    android:paddingLeft="@dimen/dimen_row_padding_left"
+    android:paddingRight="@dimen/dimen_row_padding_right"
+    android:paddingTop="@dimen/dimen_row_padding_top">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearAdPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/linearPoints"
+        android:layout_alignBottom="@+id/linearPoints"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewAdPlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="right"
+            android:textSize="@dimen/dimen_list_normal_textsize"
+            android:textColor="@color/colorPrimary"
+            android:text="Play!" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearPoints"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/linearAdPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewPoints"
+            android:layout_width="@dimen/dimen_grey_button"
+            android:layout_height="@dimen/dimen_grey_button"
+            android:background="@drawable/greybox" />
+
+        <TextView
+            android:id="@+id/textViewPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrey"
+            android:layout_marginLeft="3dp"
+            android:textSize="@dimen/dimen_list_normal_textsize"
+            android:layout_gravity="center_vertical"
+            android:text="10" />
+
+        <ImageView
+            android:id="@+id/imageViewHours"
+            android:layout_marginLeft="10dp"
+            android:layout_width="@dimen/dimen_grey_button"
+            android:layout_height="@dimen/dimen_grey_button"
+            android:background="@drawable/blackbox" />
+
+        <TextView
+            android:id="@+id/textViewHour"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/dimen_list_normal_textsize"
+            android:layout_marginLeft="3dp"
+            android:text="3h" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@+id/linearPoints"
+        android:layout_alignBottom="@+id/linearPoints"
+        android:layout_toLeftOf="@+id/linearPoints"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/colorBlack"
+        android:text="@string/text_title_celebrity_name" />
+
+
+
+</RelativeLayout>

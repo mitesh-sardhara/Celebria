@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/title_bg_blue"
+        android:padding="@dimen/dimen_winner_title_padding">
+
+        <TextView
+            android:id="@+id/textViewWinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text_title_winner"
+            android:textColor="@color/colorTabFont"
+            android:textSize="@dimen/dimen_screen_title_textsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeQuizFor"
+        android:layout_below="@+id/relativeheader">
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_winner_line_view_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/dimen_winner_line_view_padding_tb"
+            android:layout_marginLeft="@dimen/dimen_winner_line_view_padding_lr"
+            android:layout_marginRight="@dimen/dimen_winner_line_view_padding_lr"
+            android:layout_marginTop="@dimen/dimen_winner_line_view_padding_tb"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:id="@+id/relativeMeVsOponant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/viewLine">
+
+            <RelativeLayout
+                android:id="@+id/relativeCenterInside"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/winner_line"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageLeftWinnerArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_winner_arrow_margin_lr"
+                    android:background="@drawable/winner_arrow_left"
+                    android:gravity="center"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/imageRightWinnerArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_winner_arrow_margin_lr"
+                    android:background="@drawable/winner_arrow_right"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/relativeCenterInside"
+                android:gravity="center_vertical|right">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageViewMyImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/avatar" />
+
+                    <TextView
+                        android:id="@+id/textViewMyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageViewMyImage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_winner_margin_top_name"
+                        android:text="You"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimen_winner_content_textsize_big" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewMyName"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/textViewMyPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageViewMyPoint"
+                            android:text="12"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/dimen_winner_content_textsize_big" />
+
+                        <ImageView
+                            android:id="@+id/imageViewMyPoint"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/greybox" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/relativeCenterInside"
+                android:gravity="center_vertical|left">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageViewOponant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/avatar" />
+
+                    <TextView
+                        android:id="@+id/textViewOponantName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageViewOponant"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_winner_margin_top_name"
+                        android:text="Steve"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="@dimen/dimen_winner_content_textsize_big" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewOponantName"
+
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/textViewOponantPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageViewMyPoint"
+                            android:text="12"
+                            android:textColor="@color/colorDarkGrey"
+                            android:textSize="@dimen/dimen_winner_content_textsize_big" />
+
+                        <ImageView
+                            android:id="@+id/imageViewOponantPoint"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/blackbox" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeQuizFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDone"
+        android:background="@drawable/title_bg_blue"
+        android:paddingBottom="@dimen/dimen_winner_quiz_for_info_padding_tb"
+        android:paddingTop="@dimen/dimen_winner_quiz_for_info_padding_tb">
+
+        <RelativeLayout
+            android:id="@+id/relativeQuizForSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/dimen_winner_quiz_for_info_padding_lr"
+            android:paddingRight="@dimen/dimen_winner_quiz_for_info_padding_lr">
+
+            <TextView
+                android:id="@+id/textQuizForTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Vikkstar123"
+                android:textColor="@color/colorTabFont"
+                android:textSize="@dimen/dimen_winner_content_textsize_big" />
+
+            <TextView
+                android:id="@+id/textQuizForInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textQuizForTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Youtube, personality, gamer, asdasdsadsadsa asdasdsad entertainer."
+                android:textColor="@color/colorTabFont"
+                android:textSize="@dimen/dimen_winner_content_textsize_normal" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/done_btn"
+        android:gravity="center"
+        android:text="@string/text_btn_done"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dimen_winner_done_btn_textsize" />
+
+</RelativeLayout>

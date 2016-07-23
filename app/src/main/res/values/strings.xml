@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Celebria</string>
+
+    <!--Screen Login-->
+    <string name="title_status_line">Meet your favorite celebrities.</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_create_account">Create Account</string>
+    <string name="text_forgot_passowrd">Forgot Passowrd?</string>
+
+    <!--Screen Active Trivia-->
+    <string name="text_tab_active_trivia">Active Trivia</string>
+    <string name="text_tab_all_celebrities">All Celebrities</string>
+    <string name="text_demo_username">Jake</string>
+
+    <!--Screen Match up-->
+    <string name="text_title_matchup">Matchup!</string>
+
+    <!--Screen Winner-->
+    <string name="text_title_winner">Winner!</string>
+    <string name="text_btn_done">Done</string>
+
+    <!--Screen Question Answer-->
+    <string name="text_title_celebrity_name">Vikkster123</string>
+    <string name="text_dummy_question">What college did Vikkster123 famously decline to pursue his YouTube career?</string>
+    <string name="text_dummy_option_1">A: Stanford University</string>
+    <string name="text_dummy_option_2">B: Oxford College</string>
+    <string name="text_dummy_option_3">C: Cambridge University</string>
+    <string name="text_dummy_option_4">D: University College London</string>
+    <string name="text_a_friend">Text a Friend</string>
+
+
+
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bg_blue"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/textViewTitleHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text_title_celebrity_name"
+            android:textColor="@color/colorPrimaryWhite"
+            android:textSize="@dimen/dimen_screen_title_textsize" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeUserWithPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader">
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_matchup_line_view_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dimen_matchup_line_view_padding_lr"
+            android:layout_marginRight="@dimen/dimen_matchup_line_view_padding_lr"
+            android:layout_marginTop="@dimen/dimen_matchup_line_view_padding_tb"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textGamePoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewLine"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/game_point_box"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="@dimen/dimen_qa_game_point_padding_bottom"
+            android:text="10"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/dimen_qa_game_point_textsize" />
+
+        <LinearLayout
+            android:id="@+id/linearLeftPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/dimen_qa_player_layout_margin_b"
+            android:layout_marginLeft="@dimen/dimen_qa_player_layout_margin_lr"
+            android:layout_marginTop="@dimen/dimen_qa_player_layout_margin_t"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewMyImage"
+                android:layout_width="@dimen/dimen_qa_small_avatar_size"
+                android:layout_height="@dimen/dimen_qa_small_avatar_size"
+                android:src="@drawable/avatar" />
+
+            <TextView
+                android:id="@+id/textViewMypoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="10"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_game_point_textsize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLeftPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dimen_qa_player_layout_margin_b"
+            android:layout_marginRight="@dimen/dimen_qa_player_layout_margin_lr"
+            android:layout_marginTop="@dimen/dimen_qa_player_layout_margin_t"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewOponantpoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="10"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="@dimen/dimen_qa_game_point_textsize" />
+
+            <ImageView
+                android:id="@+id/imageViewOponantImage"
+                android:layout_width="@dimen/dimen_qa_small_avatar_size"
+                android:layout_height="@dimen/dimen_qa_small_avatar_size"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/avatar" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeQuestionAnswerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/LinearTextFriendLayout"
+        android:layout_below="@+id/relativeUserWithPoints" >
+
+        <LinearLayout
+            android:id="@+id/linearQuestionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_qa_question_layout_margin_lr"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dimen_qa_question_layout_margin_lr"
+            >
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_dummy_question"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearQptionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="@dimen/dimen_qa_margin_between_question_answer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOption1"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_qa_option_inside_padding"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/text_dummy_option_1"
+                android:textColor="@color/colorPrimaryWhite"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+
+            <TextView
+                android:id="@+id/textViewOption2"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/dimen_qa_margin_between_options"
+                android:paddingLeft="@dimen/dimen_qa_option_inside_padding"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/text_dummy_option_2"
+                android:textColor="@color/colorPrimaryWhite"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+
+            <TextView
+                android:id="@+id/textViewOption3"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/dimen_qa_margin_between_options"
+                android:paddingLeft="@dimen/dimen_qa_option_inside_padding"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/text_dummy_option_3"
+                android:textColor="@color/colorPrimaryWhite"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+
+            <TextView
+                android:id="@+id/textViewOption4"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_qa_margin_between_options"
+                android:paddingLeft="@dimen/dimen_qa_option_inside_padding"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/text_dummy_option_4"
+                android:textColor="@color/colorPrimaryWhite"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearTextFriendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/dimen_qa_linear_textfriend_margin"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|left"
+            android:background="@drawable/text_a_friend_btn">
+
+            <TextView
+                android:id="@+id/textViewTextaFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_a_friend"
+                android:layout_marginLeft="@dimen/dimen_qa_text_friend_padding"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="@dimen/dimen_qa_question_textsize" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.celebria" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+         >
+
+        <activity android:name=".ActivityLogin"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityActiveTrivia"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ActivityMatchUp"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ActivityQuestionAnswer"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ActivityWinner"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+    </application>
+
+</manifest>
